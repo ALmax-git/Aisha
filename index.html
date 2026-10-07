@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aisha Shaibu Abdullahi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #f8fafc;
+      }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+    </style>
+  </head>
+  <body x-data="{menu:false}" class="text-slate-700 antialiased">
+    <header class="fixed top-0 inset-x-0 z-50">
+      <nav
+        class="mx-auto mt-4 max-w-6xl rounded-2xl border bg-white/85 px-4 py-3 shadow-lg backdrop-blur"
+      >
+        <div class="flex items-center justify-between">
+          <a href="#home" class="flex items-center gap-3">
+            <span
+              class="grid h-10 w-10 place-items-center rounded-xl bg-slate-950 font-bold text-white"
+              >AS</span
+            >
+            <div>
+              <b class="text-slate-950">Aisha Shaibu</b
+              ><small
+                class="block text-[10px] uppercase tracking-widest text-slate-400"
+                >Professional Profile</small
+              >
+            </div>
+          </a>
+          <div class="hidden gap-7 text-sm font-medium md:flex">
+            <a href="#about" class="hover:text-blue-600">About</a
+            ><a href="#skills" class="hover:text-blue-600">Skills</a
+            ><a href="#education" class="hover:text-blue-600">Education</a
+            ><a
+              href="#contact"
+              class="rounded-full bg-slate-950 px-5 py-2.5 text-white hover:bg-blue-600"
+              >Contact</a
+            >
+          </div>
+          <button
+            @click="menu=!menu"
+            class="rounded-xl border px-3 py-2 md:hidden"
+          >
+            ☰
+          </button>
+        </div>
+        <div x-show="menu" x-transition class="space-y-1 pt-3 md:hidden">
+          <a @click="menu=false" href="#about" class="block rounded-lg p-2"
+            >About</a
+          >
+          <a @click="menu=false" href="#skills" class="block rounded-lg p-2"
+            >Skills</a
+          >
+          <a @click="menu=false" href="#education" class="block rounded-lg p-2"
+            >Education</a
+          >
+          <a @click="menu=false" href="#contact" class="block rounded-lg p-2"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="grid-bg pt-36">
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-14 px-5 pb-24 lg:grid-cols-[1.2fr_.8fr]"
+      >
+        <div>
+          <span
+            class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-bold text-blue-700"
+            ><i class="h-2 w-2 rounded-full bg-blue-600"></i> Available for
+            opportunities</span
+          >
+          <h1
+            class="mt-6 text-5xl font-bold tracking-tight text-slate-950 sm:text-6xl"
+          >
+            Aisha Shaibu <span class="block text-blue-600">Abdullahi.</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Computer Science graduate with good computer and office skills, a
+            willingness to learn, and a responsible approach to work.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a
+              href="#contact"
+              class="rounded-xl bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white hover:bg-blue-600"
+              >Get in touch</a
+            ><a
+              href="#about"
+              class="rounded-xl border bg-white px-6 py-3.5 text-sm font-semibold hover:text-blue-600"
+              >View profile</a
+            >
+          </div>
+          <p class="mt-9 text-sm text-slate-500">
+            ● Maiduguri, Borno State &nbsp; ● Computer Science
+          </p>
+        </div>
+        <div
+          class="mx-auto w-full max-w-md rounded-[2rem] border bg-white p-7 shadow-2xl shadow-slate-900/10"
+        >
+          <div class="flex items-center gap-5">
+            <div
+              class="grid h-24 w-24 place-items-center rounded-3xl bg-gradient-to-br from-slate-950 to-blue-700 text-2xl font-bold text-white"
+            >
+              AS
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-slate-950">Aisha Shaibu</h2>
+              <p class="text-sm text-blue-600">Computer Science Graduate</p>
+              <p class="mt-1 text-xs text-slate-400">Ramat Polytechnic</p>
+            </div>
+          </div>
+          <hr class="my-7" />
+          <div class="space-y-5 text-sm">
+            <div>
+              <b class="text-slate-950">✓ Office & Computer Skills</b>
+              <p class="mt-1 text-slate-500">
+                Comfortable with everyday computer-based work.
+              </p>
+            </div>
+            <div>
+              <b class="text-slate-950">✓ Ready to Learn</b>
+              <p class="mt-1 text-slate-500">
+                Open to training and new responsibilities.
+              </p>
+            </div>
+            <div>
+              <b class="text-slate-950">✓ Professional Attitude</b>
+              <p class="mt-1 text-slate-500">
+                Responsible, respectful and dependable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-white py-24">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[.7fr_1.3fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-blue-600">
+            About me
+          </p>
+          <h2 class="mt-3 text-4xl font-bold tracking-tight text-slate-950">
+            Simple, capable, ready to contribute.
+          </h2>
+        </div>
+        <div class="text-lg leading-8 text-slate-600">
+          <p>
+            I am a Computer Science graduate from Ramat Polytechnic with an
+            interest in office work, computer-based tasks and professional
+            environments where I can learn and grow.
+          </p>
+          <p class="mt-5">
+            I take my responsibilities seriously and I am comfortable learning
+            new procedures and working with other people. I am looking for an
+            opportunity where I can use my existing skills while developing new
+            ones.
+          </p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl bg-slate-50 p-5">
+              <b class="text-2xl text-slate-950">01</b>
+              <p class="text-sm">Computer background</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 p-5">
+              <b class="text-2xl text-slate-950">02</b>
+              <p class="text-sm">Office-ready skills</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 p-5">
+              <b class="text-2xl text-slate-950">03</b>
+              <p class="text-sm">Willing to learn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <p class="text-sm font-bold uppercase tracking-[.2em] text-blue-600">
+          Skills
+        </p>
+        <h2 class="mt-3 text-4xl font-bold text-slate-950">
+          Practical skills for everyday work.
+        </h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-3xl border bg-white p-7 shadow-sm">
+            <span class="text-2xl text-blue-600">⌨</span>
+            <h3 class="mt-5 font-bold">Computer Operation</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Comfortable using computers for regular office and
+              information-handling tasks.
+            </p>
+          </div>
+          <div class="rounded-3xl border bg-white p-7 shadow-sm">
+            <span class="text-2xl text-blue-600">▤</span>
+            <h3 class="mt-5 font-bold">Office Work</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Able to handle routine office duties, documents and digital
+              information.
+            </p>
+          </div>
+          <div class="rounded-3xl border bg-white p-7 shadow-sm">
+            <span class="text-2xl text-blue-600">↗</span>
+            <h3 class="mt-5 font-bold">Learning & Adaptability</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Willing to learn new systems, procedures and responsibilities.
+            </p>
+          </div>
+          <div class="rounded-3xl border bg-white p-7 shadow-sm">
+            <span class="text-2xl text-blue-600">◎</span>
+            <h3 class="mt-5 font-bold">Teamwork</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Able to work respectfully with colleagues and contribute to shared
+              tasks.
+            </p>
+          </div>
+          <div class="rounded-3xl border bg-white p-7 shadow-sm">
+            <span class="text-2xl text-blue-600">✓</span>
+            <h3 class="mt-5 font-bold">Responsibility</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Takes assigned duties seriously and aims to complete work
+              properly.
+            </p>
+          </div>
+          <div class="rounded-3xl border bg-white p-7 shadow-sm">
+            <span class="text-2xl text-blue-600">+</span>
+            <h3 class="mt-5 font-bold">Professional Growth</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Interested in gaining practical experience and building a career.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="bg-slate-950 py-24 text-white">
+      <div class="mx-auto max-w-6xl px-5">
+        <p class="text-sm font-bold uppercase tracking-[.2em] text-blue-400">
+          Education
+        </p>
+        <h2 class="mt-3 text-4xl font-bold">Academic background.</h2>
+        <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-7">
+          <h3 class="text-xl font-bold">Ramat Polytechnic</h3>
+          <p class="mt-1 text-blue-300">Computer Science</p>
+          <p class="mt-4 max-w-2xl leading-7 text-slate-400">
+            Studied Computer Science and developed a foundation in computer use,
+            digital systems and information technology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div
+          class="rounded-[2rem] bg-blue-600 p-8 text-white shadow-2xl sm:p-12"
+        >
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-blue-200">
+            Contact
+          </p>
+          <h2 class="mt-3 text-4xl font-bold">
+            Interested in working together?
+          </h2>
+          <div class="mt-8 grid gap-3 text-sm sm:grid-cols-3">
+            <a
+              href="tel:08039843038"
+              class="rounded-xl bg-white/10 px-5 py-4 hover:bg-white/20"
+              >☎ 08039843038</a
+            >
+            <a
+              href="mailto:shuaibuaisha125@gmail.com"
+              class="rounded-xl bg-white/10 px-5 py-4 hover:bg-white/20"
+              >✉ shuaibuaisha125@gmail.com</a
+            >
+            <div class="rounded-xl bg-white/10 px-5 py-4">
+              ⌖ Maiduguri, Borno State
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t bg-white py-8 text-center text-sm text-slate-400">
+      © 2025 Aisha Shaibu Abdullahi · Professional Portfolio
+    </footer>
+  </body>
+</html>
